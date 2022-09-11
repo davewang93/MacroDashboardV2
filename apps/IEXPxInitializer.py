@@ -77,8 +77,8 @@ maintable = pd.DataFrame()
 #for each ticker in the file, pulls price data for specified date, and pushes to mysql db under associated table name
 for index,row in tickers.iterrows():
     #remember to toggle exchange
-    start = "5/31/2007"
-    end = "5/20/22"
+    start = "5/31/2017"
+    end = "9/09/22"
     symbol = row['Ticker']
     tablename = row['Table']
     df = get_historical_data(symbol, start,end, token = key, output_format='pandas')

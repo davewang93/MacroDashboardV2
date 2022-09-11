@@ -102,7 +102,7 @@ for index,row in tickers.iterrows():
     df = df[['symbol','close','high','low','open','volume']]
     #df = df.drop('volume',1)
     df.to_sql(tablename, engine, if_exists='append')
-    #print(df)
+    print(df)
     maintable = pd.concat([df, maintable])
     #print(maintable)
     maintable.index.names = ['date'] 
